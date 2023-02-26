@@ -28,6 +28,19 @@ function createTransactionAmount(amount){
   return span
 }
 
+async function saveTransaction(ev){
+  ev.preventDefault()
+  
+  const name = document.getElementById('name').value
+  const amount = document.getElementById('amount').value
+
+  const result = await fetch('http://localhost:3000/transactions', {
+    method: 'POST',
+    body: JSON.stringify({name,amount}),
+    headers: {'Content-Type': 'application/json'}
+  })
+}
+
 function renderTransaction(transaction){
   const container = createTransactionContainer(transaction.id)
   const title = createTransactionTitle(transaction.name)
@@ -49,3 +62,4 @@ async function setup(){
 }
 
 document.addEventListener('DOMContentLoaded', setup)
+document.querySelector('form').addEventListener('submit', saveTransaction)
