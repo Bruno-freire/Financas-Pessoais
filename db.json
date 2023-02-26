@@ -19,6 +19,11 @@
       "name": "Conta de luz",
       "amount": -150,
       "id": 4
+    },
+    {
+      "name": "lanche",
+      "amount": -50,
+      "id": 5
     }
   ]
 }
