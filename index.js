@@ -35,6 +35,33 @@ function createTransactionAmount(amount){
   return span
 }
 
+function createEditTransactionBtn(transaction){
+  const editBtn = document.createElement('button')
+  editBtn.classList.add('edit-btn')
+  editBtn.textContent = 'Editar'
+
+  editBtn.addEventListener('click', () => {
+    document.getElementById('id').value = transaction.id
+    document.getElementById('name').value = transaction.name
+    document.getElementById('amount').value = transaction.amount
+  })
+
+  return editBtn
+}
+
+function createDeleteTransaction(transaction){
+  const deleteBtn = document.createElement('button')
+  deleteBtn.classList.add('delete-btn')
+  deleteBtn.textContent = 'Deletar'
+  deleteBtn.addEventListener('click', async () => {
+    await fetch(`http://localhost:3000/transactions/${transaction.id}`, {
+      method: 'DELETE'
+    })
+    transaction.remove()
+  })
+  return deleteBtn
+}
+
 function updateBalance(){
   const balance = document.getElementById('balance')
   const fullAmount = transactions.reduce((sum, transaction) => sum + transaction.amount, 0)
@@ -48,12 +75,22 @@ async function saveTransaction(ev){
 
   const name = document.getElementById('name').value
   const amount = parseFloat(document.getElementById('amount').value)
+  const id = document.getElementById('id').value
 
-  await fetch('http://localhost:3000/transactions', {
+  if(id){
+    await fetch(`http://localhost:3000/transactions/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({name,amount})
+    })
+  }else{
+    await fetch('http://localhost:3000/transactions', {
     method: 'POST',
     body: JSON.stringify({name,amount}),
     headers: {'Content-Type': 'application/json'}
   })
+  }
+  
   updateBalance()
 }
 
@@ -61,9 +98,11 @@ function renderTransaction(transaction){
   const container = createTransactionContainer(transaction.id)
   const title = createTransactionTitle(transaction.name)
   const amount = createTransactionAmount(transaction.amount)
+  const editBtn = createEditTransactionBtn(transaction)
+  const deleteBtn = createDeleteTransaction(transaction)
 
   const section = document.getElementById('transactions')
-  container.append(title, amount)
+  container.append(title, amount,editBtn,deleteBtn)
   section.append(container)
   updateBalance()
 }
