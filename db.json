@@ -24,6 +24,11 @@
       "name": "lanche",
       "amount": -50,
       "id": 5
+    },
+    {
+      "name": "Gás de cozinha",
+      "amount": -120,
+      "id": 6
     }
   ]
 }
