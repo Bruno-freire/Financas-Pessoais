@@ -1,4 +1,4 @@
-Meu Projeto HTML5 CSS3 e JavaScript Avançado
+Finanças Pessoais
 
 Este projeto foi desenvolvido utilizando HTML5, CSS3 e JavaScript Avançado. Ele faz uso de um servidor e um banco de dados simulado para armazenar informações e utiliza a API chamada json-server para o gerenciamento dos dados.
 Instalação
@@ -7,11 +7,9 @@ Para utilizar o projeto, é necessário instalar a biblioteca json-server na sua
 
 npm install -g json-server
 
-Depois de instalado, crie um arquivo chamado "db.json" para simular um banco de dados e execute o seguinte comando ,para iniciar o servidor
+Depois de instalado, crie um arquivo chamado "db.json" para simular um banco de dados e execute o seguinte comando para iniciar o servidor
 
-css
-
-json-server --watch db.json
+npx json-server --watch db.json
 
 Como usar
 
