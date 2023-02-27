@@ -9,7 +9,7 @@ npm install -g json-server
 
 Depois de instalado, crie um arquivo chamado "db.json" para simular um banco de dados e execute o seguinte comando para iniciar o servidor
 
-npx json-server --watch db.json
+    npx json-server --watch db.json
 
 Como usar
 
