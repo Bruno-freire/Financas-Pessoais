@@ -1,34 +1,37 @@
-Finanças Pessoais
+# Personal finances
 
-Este projeto foi desenvolvido utilizando HTML5, CSS3 e JavaScript Avançado. Ele faz uso de um servidor e um banco de dados simulado para armazenar informações e utiliza a API chamada json-server para o gerenciamento dos dados.
-Instalação
+This project was developed using HTML5, CSS3 and Advanced JavaScript. It makes use of a server and a simulated database to store information and uses the API called json-server for data management.
 
-Para utilizar o projeto, é necessário instalar a biblioteca json-server na sua máquina. Você pode fazer isso utilizando o seguinte comando:
+# Installation
+
+To use the project, you need to install the json-server library on your machine. You can do this using the following command:
 
 npm install -g json-server
 
-Depois de instalado, crie um arquivo chamado "db.json" para simular um banco de dados e execute o seguinte comando para iniciar o servidor
+Once installed, create a file called "db.json" to simulate a database and run the following command to start the server
 
     npx json-server --watch db.json
 
-Como usar
+# How to use
 
-Após iniciar o servidor, você pode acessar o projeto através do seu navegador, utilizando a URL: http://localhost:3000. Você poderá visualizar as informações armazenadas no banco de dados simulado e utilizar as funcionalidades do projeto.
-Requisitos do Sistema
+After starting the server, you can access the project through your browser, using the URL: http://localhost:3000. You will be able to visualize the information stored in the simulated database and use the project functionalities.
+System Requirements
 
-Para utilizar o projeto, é necessário ter instalado na sua máquina a biblioteca json-server. Certifique-se de que sua máquina atende aos requisitos mínimos do sistema.
-Descrição do Projeto
+To use the project, you must have the json-server library installed on your machine. Make sure your machine meets the minimum system requirements.
 
-Este projeto é uma aplicação web que permite ao usuário visualizar e gerenciar informações armazenadas em um banco de dados simulado. Ele foi desenvolvido utilizando HTML5, CSS3 e JavaScript Avançado e utiliza a API json-server para o gerenciamento dos dados.
-Funcionalidades
+# Project description
 
-O projeto possui as seguintes funcionalidades:
+This project is a web application that allows the user to view and manage information stored in a simulated database. It was developed using HTML5, CSS3 and Advanced JavaScript and uses the json-server API for data management.
 
-    Visualização de dados armazenados no banco de dados simulado
-    Inclusão de novas informações no banco de dados simulado
-    Edição de informações armazenadas no banco de dados simulado
-    Exclusão de informações armazenadas no banco de dados simulado
+# Functionalities
 
-Suporte
+The project has the following features:
 
-Se você tiver alguma dúvida ou problema com o projeto, por favor, entre em contato através do link: https://www.linkedin.com/in/bruno-freire-174294240/
+    Visualization of data stored in the simulated database
+    Inclusion of new information in the simulated database
+    Editing information stored in the simulated database
+    Deletion of information stored in the simulated database
+
+# Support
+
+If you have any questions or problems with the project, please get in touch via the link: https://www.linkedin.com/in/bruno-freire-174294240/
